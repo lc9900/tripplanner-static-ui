@@ -1,15 +1,26 @@
 const express = require('express');
 const path = require('path');
-const swig = require('swig');
-swig.setDefaults({ cache: false });
+const nunjucks = require('nunjucks');
 const models = require('./models');
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
+
 
 const app = express();
+
+app.use(morgan('dev'));
 app.set('view engine', 'html');
-app.engine('html', swig.renderFile);
+// app.engine('html', nunjucks.render);
+
+nunjucks.configure('views', {
+  noCache: true,
+  express: app,
+  autoescape: true
+});
 
 app.use('/public', express.static(path.join(__dirname, 'public')));
-
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
 app.get('/', (req, res, next)=> {
   res.render('index');
