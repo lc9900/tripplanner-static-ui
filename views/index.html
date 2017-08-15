@@ -1,6 +1,32 @@
 {% extends './layout.html' %}
 {% block content %}
 <div>
-  Stuff goes here..
+Hotels
+    <select>
+      {% for hotel in hotels%}
+
+            <option>{{hotel.name}}</option>
+
+      {% endfor %}
+   </select>
+
+Restaurants
+    <select>
+      {% for restaurant in restaurants%}
+
+            <option>{{restaurant.name}}</option>
+
+      {% endfor %}
+   </select>
+
+Activities
+    <select>
+      {% for act in activities%}
+
+            <option>{{act.name}}</option>
+
+      {% endfor %}
+   </select>
+
 </div>
 {% endblock %}

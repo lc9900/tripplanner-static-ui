@@ -23,7 +23,13 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 app.get('/', (req, res, next)=> {
-  res.render('index');
+  models.retrieveAll()
+    .then(([activities, hotels, restaurants]) => {
+      res.render('index', {activities, hotels, restaurants});
+      // res.json({activities, hotels, restaurants});
+    }).catch(err => { throw err; });
+
+    //res.render('index')
 });
 
 app.use((req, res, next)=> {

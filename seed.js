@@ -2,7 +2,7 @@
 // The data can then be loaded with the node seed.js
 
 var Promise = require('bluebird');
-var db = require('./models');
+var db = require('./models/_db');
 var Place = require('./models/place');
 var Hotel = require('./models/hotel');
 var Restaurant = require('./models/restaurant');
@@ -61,6 +61,10 @@ var data = {
     {name: "Strand Bookstore", place: {address: "828 Broadway", city: "New York", state: "NY", phone: "123-456-7890", location: [40.733274, -73.990870]}, age_range: "All" }
   ]
 };
+
+// Hotel.belongsTo(Place);
+// Activity.belongsTo(Place);
+// Restaurant.belongsTo(Place);
 
 db.sync({force: true})
 .then(function () {
