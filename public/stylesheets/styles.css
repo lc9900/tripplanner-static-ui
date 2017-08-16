@@ -1,3 +1,6 @@
 .navbar-inverse, .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
   background-color: #b3e0f2;
   border: none; }
+
+#map-canvas {
+  height: 50vh; }
