@@ -1,32 +1,41 @@
 {% extends './layout.html' %}
 {% block content %}
-<div>
-Hotels
-    <select>
-      {% for hotel in hotels%}
+<div class='row'>
+      <div class='col-md-8'>
+            [[map]]
+      </div>
 
-            <option>{{hotel.name}}</option>
+      <div class='col-md-4'>
+            <h4>Hotels</h4>
+            <select>
+                  {% for hotel in hotels%}
 
-      {% endfor %}
-   </select>
+                        <option>{{hotel.name}}</option>
 
-Restaurants
-    <select>
-      {% for restaurant in restaurants%}
+                  {% endfor %}
+            </select>
 
-            <option>{{restaurant.name}}</option>
+            <h4>Restaurants</h4>
+            <select>
+                  {% for restaurant in restaurants%}
 
-      {% endfor %}
-   </select>
+                        <option>{{restaurant.name}}</option>
 
-Activities
-    <select>
-      {% for act in activities%}
+                  {% endfor %}
+            </select>
 
-            <option>{{act.name}}</option>
+            <h4>Activities</h4>
+            <select>
+                  {% for act in activities%}
 
-      {% endfor %}
-   </select>
+                        <option>{{act.name}}</option>
 
+                  {% endfor %}
+            </select>
+
+            <div>
+            [[Planner]]
+            </div>
+      </div>
 </div>
 {% endblock %}

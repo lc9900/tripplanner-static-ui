@@ -62,9 +62,9 @@ var data = {
   ]
 };
 
-// Hotel.belongsTo(Place);
-// Activity.belongsTo(Place);
-// Restaurant.belongsTo(Place);
+Hotel.belongsTo(Place);
+Activity.belongsTo(Place);
+Restaurant.belongsTo(Place);
 
 db.sync({force: true})
 .then(function () {
