@@ -1,8 +1,87 @@
+@import 'helpers';
+
+
 .navbar-inverse, .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
-  background-color: lighten(skyblue, 10%);
+  background-color: lighten(#9A8755, 0%);
+  color: darken(#DFE7F0, 10%);
   border: none;
 }
 
+#top-bar {
+    margin-bottom: 0px;
+}
 #map-canvas {
-    height: 50vh;
+    height: 92vh;
+    width: 100%;
+}
+
+.container#content {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+}
+
+#top-panel, #bottom-panel {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+body {
+    background-color: lighten(#9A8755, 30%);
+}
+
+#right-pane {
+    margin: auto;
+}
+
+#day-box {
+    width: 10vw;
+    margin: auto;
+    // text-align: center;
+    border: 1px solid darken(#9A8755, 10%);
+    @include border-radius(5px);
+    color: darken(#9A8755, 20%);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#day-box>h3 {
+    margin-top: 10px;
+}
+
+#day {
+    font-size: 20px;
+}
+
+.circle {
+    @include border-radius(50px);
+}
+
+#day-box-btn {
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+.panel-default>.panel-heading {
+    background-color: darken(#9A8755, 20%);
+}
+
+.panel-default>.panel-heading .badge {
+    background-color: darken(#9A8755, 20%);
+    border: 1px solid darken(#DFE7F0, 30%);
+    color: darken(#DFE7F0, 30%);
+}
+
+.panel-default>.panel-heading .badge.active {
+    background-color: darken(#DFE7F0, 30%);
+    border: 1px solid darken(#DFE7F0, 30%);
+    color: darken(#9A8755, 20%);
+}
+
+.panel-body {
+    background-color: #f2ece8;
+}
+
+#top-panel {
+    @include border-radius(50px);
 }
