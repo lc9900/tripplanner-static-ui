@@ -1,17 +1,8 @@
 @import 'helpers';
 
-
-.navbar-inverse, .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
-  background-color: lighten(#9A8755, 0%);
-  color: darken(#DFE7F0, 10%);
-  border: none;
-}
-
-#top-bar {
-    margin-bottom: 0px;
-}
+// General Layout
 #map-canvas {
-    height: 92vh;
+    height: 100vh;
     width: 100%;
 }
 
@@ -21,21 +12,40 @@
     padding-left: 0;
 }
 
-#top-panel, #bottom-panel {
-    margin-top: 10px;
-    margin-bottom: 30px;
-}
 
 body {
     background-color: lighten(#9A8755, 30%);
+    padding-top: 50px;
 }
 
 #right-pane {
     margin: auto;
 }
 
+// Nav-bar
+.navbar-inverse, .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
+  background-color: lighten(#9A8755, 0%);
+  color: darken(#DFE7F0, 10%);
+  border: none;
+}
+
+#top-bar {
+    margin-bottom: 0px;
+}
+
+// Buttons
+button.btn-circle {
+    @include border-radius(50px);
+}
+
+button.btn.glyphicon-remove {
+    font-size: .9em;
+}
+
+
+// Day Box
 #day-box {
-    width: 10vw;
+    width: 9vw;
     margin: auto;
     // text-align: center;
     border: 1px solid darken(#9A8755, 10%);
@@ -43,23 +53,27 @@ body {
     color: darken(#9A8755, 20%);
     padding-left: 5px;
     padding-right: 5px;
+    padding-top: 5px;
+    @include clearfix();
 }
 
-#day-box>h3 {
-    margin-top: 10px;
-}
-
-#day {
+#days {
     font-size: 20px;
+    font-weight: bold;
 }
 
-.circle {
-    @include border-radius(50px);
+#day-box-btn-wrapper {
+    padding-top: 3px;
 }
 
-#day-box-btn {
-    margin-left: 20px;
-    margin-bottom: 5px;
+// #day-box>h3 {
+//     margin-top: 10px;
+// }
+
+// Panels
+#top-panel, #bottom-panel {
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 .panel-default>.panel-heading {
@@ -80,8 +94,35 @@ body {
 
 .panel-body {
     background-color: #f2ece8;
+    // @include border-radius(10px);
 }
 
-#top-panel {
-    @include border-radius(50px);
+.panel{
+    @include border-radius(8px);
+    border: none;
 }
+
+.panel-heading {
+    @include border-radius-top(8px);
+}
+
+.panel-body {
+    @include border-radius-bottom(8px);
+}
+
+#top-panel>.panel-body {
+    @include border-radius(8px);
+}
+// Top Panel
+// #top-panel {
+//     @include border-radius(10px);
+// }
+
+
+
+// Bottom Panel
+
+#bottom-panel h5 {
+    color: lighten(black, 65%);
+}
+

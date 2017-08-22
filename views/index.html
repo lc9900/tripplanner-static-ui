@@ -41,7 +41,17 @@
             <!-- <span id='day'>Day 2</span>
             <span class="label label-danger">Danger</span> -->
             <!-- <h2>Day 2 <span class="badge"><i class='circle glyphicon glyphicon-remove'></i></span></h2> -->
-            <h3>Day 2 <button id='day-box-btn' class='btn btn-xs btn-danger circle glyphicon glyphicon-remove'></button></h3>
+            <ul class='list-unstyled'>
+              <li>
+                <span id='days'>Day 2</span>
+                <div id='day-box-btn-wrapper'class='pull-right'>
+                  <button id='day-box-btn' class='btn btn-xs btn-danger btn-circle glyphicon glyphicon-remove'></button>
+                </div>
+
+            </ul>
+            <!-- <div id='days'>Day 2</div> -->
+
+
             <!-- <button id='day-box-btn' class='btn btn-xs btn-danger btn-circle glyphicon glyphicon-remove'></button> -->
         </div>
 
@@ -54,32 +64,32 @@
                 <span class='badge'>5</span>
             </div>
             <div class='panel-body'>
-                <h4>Hotels</h4>
-                <select>
-                      {% for hotel in hotels%}
+                <h5>Hotels</h5>
+                <ul class="list-unstyled">
+                  <li>
+                    Andaz Wall Street
+                    <!-- <button class='btn btn-xs btn-danger btn-circle glyphicon glyphicon-remove pull-right'></button> -->
+                    <button class='btn btn-xs btn-danger btn-circle glyphicon glyphicon-remove pull-right'></button>
+                </li>
+                </ul>
 
-                            <option>{{hotel.name}}</option>
+                <h5>Restaurants</h5>
+                <ul class="list-unstyled">
+                  <li>
+                    Marc Forgione
+                    <!-- <button class='btn btn-xs btn-danger btn-circle glyphicon glyphicon-remove pull-right'></button> -->
+                    <button class='btn btn-xs btn-danger btn-circle glyphicon glyphicon-remove pull-right'></button>
+                </li>
+                </ul>
 
-                      {% endfor %}
-                </select>
-
-                <h4>Restaurants</h4>
-                <select>
-                      {% for restaurant in restaurants%}
-
-                            <option>{{restaurant.name}}</option>
-
-                      {% endfor %}
-                </select>
-
-                <h4>Activities</h4>
-                <select>
-                      {% for act in activities%}
-
-                            <option>{{act.name}}</option>
-
-                      {% endfor %}
-                </select>
+                <h5>Activities</h5>
+                <ul class="list-unstyled">
+                  <li>
+                    Mahayana Temple Buddhist Association
+                    <!-- <button class='btn btn-xs btn-danger btn-circle glyphicon glyphicon-remove pull-right'></button> -->
+                    <button class='btn btn-xs btn-danger btn-circle glyphicon glyphicon-remove pull-right'></button>
+                </li>
+                </ul>
             </div>
         </div>
       </div>

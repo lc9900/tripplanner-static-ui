@@ -1,3 +1,19 @@
+#map-canvas {
+  height: 100vh;
+  width: 100%; }
+
+.container#content {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0; }
+
+body {
+  background-color: #d5ccb3;
+  padding-top: 50px; }
+
+#right-pane {
+  margin: auto; }
+
 .navbar-inverse, .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
   background-color: #9a8755;
   color: #bccde0;
@@ -6,27 +22,16 @@
 #top-bar {
   margin-bottom: 0px; }
 
-#map-canvas {
-  height: 92vh;
-  width: 100%; }
+button.btn-circle {
+  border-radius: 50px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px; }
 
-.container#content {
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 0; }
-
-#top-panel, #bottom-panel {
-  margin-top: 10px;
-  margin-bottom: 30px; }
-
-body {
-  background-color: #d5ccb3; }
-
-#right-pane {
-  margin: auto; }
+button.btn.glyphicon-remove {
+  font-size: .9em; }
 
 #day-box {
-  width: 10vw;
+  width: 9vw;
   margin: auto;
   border: 1px solid #796a43;
   border-radius: 5px;
@@ -34,22 +39,22 @@ body {
   -webkit-border-radius: 5px;
   color: #584d31;
   padding-left: 5px;
-  padding-right: 5px; }
+  padding-right: 5px;
+  padding-top: 5px;
+  clear: both;
+  display: table;
+  content: ""; }
 
-#day-box > h3 {
-  margin-top: 10px; }
+#days {
+  font-size: 20px;
+  font-weight: bold; }
 
-#day {
-  font-size: 20px; }
+#day-box-btn-wrapper {
+  padding-top: 3px; }
 
-.circle {
-  border-radius: 50px;
-  -moz-border-radius: 50px;
-  -webkit-border-radius: 50px; }
-
-#day-box-btn {
-  margin-left: 20px;
-  margin-bottom: 5px; }
+#top-panel, #bottom-panel {
+  margin-top: 10px;
+  margin-bottom: 30px; }
 
 .panel-default > .panel-heading {
   background-color: #584d31; }
@@ -67,7 +72,26 @@ body {
 .panel-body {
   background-color: #f2ece8; }
 
-#top-panel {
-  border-radius: 50px;
-  -moz-border-radius: 50px;
-  -webkit-border-radius: 50px; }
+.panel {
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border: none; }
+
+.panel-heading {
+  border-radius: 8px 8px 0px 0px;
+  -moz-border-radius: 8px 8px 0px 0px;
+  -webkit-border-radius: 8px 8px 0px 0px; }
+
+.panel-body {
+  border-radius: 0px 0px 8px 8px;
+  -moz-border-radius: 0px 0px 8px 8px;
+  -webkit-border-radius: 0px 0px 8px 8px; }
+
+#top-panel > .panel-body {
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px; }
+
+#bottom-panel h5 {
+  color: #a6a6a6; }
